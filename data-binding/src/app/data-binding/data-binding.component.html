@@ -1,0 +1,18 @@
+<section>
+  <article>
+
+    <h3>Interpolation / Interpolação</h3>
+    <p>String realizada com interpolação {{ url }} </p> <!--    imprimindo variavel criada no data-binding.component.ts-->
+    <p>String realizada com interpolação (1 + 1) é: {{ 1 + 1 }} </p> <!--    fazendo conta direto -->
+    <p>String realizada com interpolação (1 + 1) é: {{ 1 + 1 + getValor() }} </p> <!--    chamando um metodo -->
+    <p>Curso de Angular / Gosto do Curso: {{ cursoAngular && getCurtirCurso() }} </p> <!--    chamando um metodo -->
+
+  </article>
+
+  <article>
+
+    <h3>Property Binding </h3>
+    <img src="{{urlImagem}}">
+    <img [src]="urlImagem">
+  </article>
+</section>
