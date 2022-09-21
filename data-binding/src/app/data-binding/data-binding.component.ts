@@ -35,6 +35,29 @@ export class DataBindingComponent implements OnInit {
   // }
 // =====================================================================================================================
 
+  ValorAtual: string = ''; //criando uma variavel para receber valor digitado do tipo string e vasia
+  ValorSalvo =  '';
+  isMouseOver: boolean = false;
+
+  botaoClicado(){
+    // criando metodo de clicar no botão
+    alert('botão clicado')
+  }
+
+  onKeyUp(evento: KeyboardEvent){ //estou tipando essa variavel que estou recebendo
+      console.log((<HTMLInputElement>evento.target).value); //pegando apenas o valor do log que foi digitado na caixa de texto
+      this.ValorAtual = (<HTMLInputElement>evento.target).value; // estou recebendo o valor digitado e colocando na variavel criada á cima
+  }
+
+  SalvarValor(valor: any){
+    this.ValorSalvo = valor;
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
+    // negando o seu propio valor (Esta negando e quando passo em cima ele nega tiro ele positivo)
+  }
+
   constructor() {
   }
 
